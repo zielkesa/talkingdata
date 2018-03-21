@@ -1,0 +1,66 @@
+#Setting up the mySQL database.
+
+# Setting up data base
+mysql -u root -p
+CREATE DATABASE talkingdata;
+USE talkingdata;
+
+# Loading the train_sample data set
+CREATE TABLE train_sample (
+	ip INT NULL,
+	app INT NULL,
+	device INT NULL,
+	os INT NULL,
+	channel INT NULL,
+	click_time DATETIME NULL,
+	attributed_time DATETIME NULL,
+	is_attributed INT NULL
+);
+
+LOAD DATA LOCAL INFILE '/home/stephen/Desktop/data/kaggle/TalkingData/raw/train_sample.csv'  
+REPLACE
+INTO TABLE train_sample 
+FIELDS TERMINATED BY ',' 
+LINES TERMINATED BY '\n'
+IGNORE 1 ROWS
+(ip, app, device, os, channel, click_time, @vattributed_time, is_attributed)
+SET attributed_time = NULLIF(@vattributed_time,'');
+
+# Loading the train data
+CREATE TABLE train (
+	ip INT NULL,
+	app INT NULL,
+	device INT NULL,
+	os INT NULL,
+	channel INT NULL,
+	click_time DATETIME NULL,
+	attributed_time DATETIME NULL,
+	is_attributed INT NULL
+);
+
+LOAD DATA LOCAL INFILE '/home/stephen/Desktop/data/kaggle/TalkingData/raw/train.csv'  
+REPLACE
+INTO TABLE train 
+FIELDS TERMINATED BY ',' 
+LINES TERMINATED BY '\n'
+IGNORE 1 ROWS
+(ip, app, device, os, channel, click_time, @vattributed_time, is_attributed)
+SET attributed_time = NULLIF(@vattributed_time,'');
+
+# Loading the test data
+CREATE TABLE test (
+	click_id INT NOT NULL,
+	ip INT NULL,
+	app INT NULL,
+	device INT NULL,
+	os INT NULL,
+	channel INT NULL,
+	click_time DATETIME NULL,
+	PRIMARY KEY (click_id)
+);
+
+LOAD DATA LOCAL INFILE '/home/stephen/Desktop/data/kaggle/TalkingData/raw/test.csv'  
+INTO TABLE test 
+FIELDS TERMINATED BY ',' 
+LINES TERMINATED BY '\n'
+IGNORE 1 ROWS;
