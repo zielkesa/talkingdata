@@ -1,0 +1,10 @@
+submission,file,date,score,notes
+1,submission1,0.9013,2018-03-21,naive bayes
+2,submission2all,0.7706,2018-03-27,random forest
+3,submission2mean,0.7720,2018-03-27,random forest
+4,submission2min,0.5000,2018-03-27,random forest
+5,submission3a,0.9506,2018-04-02,naive bayes
+6,submission4,0.9346,2018-04-03,naive bayes
+7,submission5mean,0.5000,2018-04-04,logistic regression
+8,submission6full,0.9508,2018-04-10,naive bayes (full model)
+9,submission6new,0.9497,2018-04-10,naive bayes (new features)
