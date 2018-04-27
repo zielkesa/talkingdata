@@ -49,7 +49,7 @@ def get_app(appNum):
     return appValue
 
 def get_os(osNum):
-    """return probabilitios for the os"""
+    """return probabilities for the os"""
     osValue = 1
     if osNum in pOSat:
         osValue = pOSat[osNum]
@@ -58,7 +58,7 @@ def get_os(osNum):
     return osValue
 
 def get_channel(channelNum):
-    """return probabilitios for the channel"""
+    """return probabilities for the channel"""
     channelValue = 1
     if channelNum in pChannelAt:
         channelValue = pChannelAt[channelNum]
@@ -67,7 +67,7 @@ def get_channel(channelNum):
     return channelValue
 
 def get_day(dayNum):
-    """return probabilitios for the day"""
+    """return probabilities for the day"""
     dayValue = 1
     if dayNum in pDayAt:
         dayValue = pDayAt[dayNum]
@@ -75,7 +75,7 @@ def get_day(dayNum):
     return dayValue
 
 def get_hour(hourNum):
-    """return probabilitios for the hour"""
+    """return probabilities for the hour"""
     hourValue = 1
     if hourNum in pHourAt:
         hourValue = pHourAt[hourNum]
@@ -83,7 +83,7 @@ def get_hour(hourNum):
     return hourValue
 
 def get_device(deviceNum):
-    """return probabilitios for the device"""
+    """return probabilities for the device"""
     deviceValue = 1
     if deviceNum in pDeviceAt:
         deviceValue = pDeviceAt[deviceNum]

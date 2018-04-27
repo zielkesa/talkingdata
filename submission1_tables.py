@@ -11,7 +11,7 @@ trainTable = 'train'
 attributed = 456846
 
 def run_query(query):
-    """runs a mysql query and returns a dict"""
+    """runs a mysql query and returns a the result"""
     db.query(query)
     dbResult = db.store_result()
     dbFetched = dbResult.fetch_row(maxrows = 0, how = 2)
