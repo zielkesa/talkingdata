@@ -15,7 +15,6 @@ submission,file,date,score,notes
 14,submission9-1M,0.9225,2018-04-26,lightGBM
 15,submission9-3M,0.9391,2018-04-26,lightGBM
 16,submission9-5M,0.9418,2018-04-26,lightGBM
-
 17,submission10sub7_sub9,0.7657,2018-04-26,ensemble
 18,submission10sub7_sub6,0.9153,2018-04-26,ensemble
 19,submission10sub7_sub2,0.7436,2018-04-26,ensemble
@@ -23,7 +22,7 @@ submission,file,date,score,notes
 21,submission10sub9_sub2,0.9428,2018-04-26,ensemble
 22,submission10sub6_sub2,0.9549,2018-04-26,ensemble
 23,submission10sub7_sub9_sub6,0.9158,2018-04-26,ensemble
-24,submission10sub7_sub9_sub2,,2018-04-,ensemble
-25,submission10sub7_sub6_sub2,,2018-04-,ensemble
-26,submission10sub9_sub6_sub2,,2018-04-,ensemble
-27,submission10sub7_sub9_sub6_sub2,,2018-04-,ensemble
+24,submission10sub7_sub9_sub2,0.7784,2018-04-28,ensemble
+25,submission10sub7_sub6_sub2,0.9166,2018-04-28,ensemble
+26,submission10sub9_sub6_sub2,0.9448,2018-04-28,ensemble
+27,submission10sub7_sub9_sub6_sub2,0.9135,2018-04-,ensemble
